@@ -1,7 +1,9 @@
 a, b , c = map(int, input().split())
-#l = list(a, b ,c)
+l = [a, b ,c]
+l.sort()
+center = l[1]
 
-if (a < b and b < c) or (c < b and b < a):
+if center == b:
     print("Yes")
 else:
     print("No")
