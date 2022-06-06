@@ -1,3 +1,5 @@
+# Answer
+# 一つのコマが(a,b)，もう一つのコマが(c,d)のとき|a-c| + |b - d|
 h, w = map(int, input().split())
 s = [input() for _ in range(h)]
 pieces = []
