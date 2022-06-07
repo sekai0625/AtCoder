@@ -22,15 +22,15 @@ def main(lines):
     while point < n:
         point += a
 
-        s = str(day)
-        if s.find('7'):
-            print(s)
+        x = [int(a) for a in str(day)]
+        result = 7 in x
+        if result:
             point += b
 
         day += 1
-    
+
     print(point)
-    print(day)
+    print(day - 1)
 
 
 if __name__ == '__main__':
