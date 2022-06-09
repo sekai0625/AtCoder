@@ -10,6 +10,7 @@ def main(lines):
     l = [] # (n, m ,k)
     color = [] # 各地点の色
     road = []
+    tmp_color = []
     for i, v in enumerate(lines):
         if i == 0:
             l = list(map(int, v.split(' ')))
@@ -17,7 +18,14 @@ def main(lines):
             color = list(map(int, v.split(' ')))
         else:
             road.append(list(map(int, v.split(' '))))
-    print(road)
+    
+    for r in road:
+        tmp = []
+        tmp.append(color[r[0] - 1])
+        tmp.append(color[r[1] - 1])
+        tmp.sort()
+        
+        
 
 
 if __name__ == '__main__':
