@@ -7,15 +7,13 @@ X = []
 for _ in range(n):
     X.append(list(map(int, input().split())))
 
-min = -1
 R = []
-for a in A:
-    max = -1
-    for x in X:
-        r = np.linalg.norm(np.array(X[a - 1]) - np.array(x))
-        if r > max:
-            max = r
-    R.append(max)
+for x in X:
+    D = []
+    for a in A:
+        r = np.linalg.norm(np.array(x)- np.array(X[a - 1]))
+        D.append(r)
+    R.append(np.min(D))
 
-print(np.min(R))
+print(np.max(R))
 # print(X)
