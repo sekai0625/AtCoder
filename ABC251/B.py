@@ -1,10 +1,10 @@
-import itertools 
+import itertools # 全ての組み合わせ
 
 n, w = map(int, input().split())
 A = list(map(int, input().split()))
 
 A2 = []
-for pair in itertools.combinations(A, 2):
+for pair in itertools.combinations(A, 2): 
     A2.append(sum(pair))
 
 for pair in itertools.combinations(A, 3):
@@ -17,5 +17,5 @@ for a in A: # set()：重複除去
     if a <= w:
         cnt += 1
 
-print(A)
+# print(A)
 print(cnt)
